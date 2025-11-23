@@ -33,7 +33,7 @@ A modern, accessible React application for displaying and managing a collection 
 
 ```bash
 git clone https://github.com/ardeleanmarcel/List-Of-Books.git
-cd List-Of-Books/book-list
+cd List-Of-Books
 ```
 
 2. Install dependencies:
