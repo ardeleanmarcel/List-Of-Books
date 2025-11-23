@@ -1,0 +1,46 @@
+.book-list {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05);
+}
+
+.book-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.book-list-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.book-list-add-button {
+  border-radius: 9999px;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.book-list-add-button:hover {
+  background-color: #1d4ed8;
+}
+
+.book-list-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.book-list-empty {
+  margin: 0.75rem 0 0;
+  color: #6b7280;
+}
