@@ -59,7 +59,7 @@ describe("BookList", () => {
   test("renders 'Add New Book' button", () => {
     render(<BookList initialBooks={[]} />);
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
     expect(addButton).toBeInTheDocument();
     expect(addButton).toHaveClass("book-list-add-button");
   });
@@ -69,18 +69,20 @@ describe("BookList", () => {
 
     expect(screen.getByText("No books available.")).toBeInTheDocument();
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
     fireEvent.click(addButton);
 
     expect(screen.queryByText("No books available.")).not.toBeInTheDocument();
     expect(screen.getByText("New Book #1")).toBeInTheDocument();
-    expect(screen.getByText("This is a newly added book.")).toBeInTheDocument();
+    expect(
+      screen.getByText("This is a newly added book without image.")
+    ).toBeInTheDocument();
   });
 
   test("adds multiple books with incremental IDs", () => {
     render(<BookList initialBooks={[]} />);
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
 
     fireEvent.click(addButton);
     expect(screen.getByText("New Book #1")).toBeInTheDocument();
@@ -103,7 +105,7 @@ describe("BookList", () => {
 
     render(<BookList initialBooks={mockBooks} />);
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
     fireEvent.click(addButton);
 
     expect(screen.getByText("New Book #2")).toBeInTheDocument();
@@ -125,7 +127,7 @@ describe("BookList", () => {
 
     render(<BookList initialBooks={mockBooks} />);
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
     fireEvent.click(addButton);
 
     expect(screen.getByText("New Book #11")).toBeInTheDocument();
@@ -134,7 +136,7 @@ describe("BookList", () => {
   test("new books are added with undefined imageUrl", () => {
     render(<BookList initialBooks={[]} />);
 
-    const addButton = screen.getByRole("button", { name: "+ Add New Book" });
+    const addButton = screen.getByRole("button", { name: "Add New Book" });
     fireEvent.click(addButton);
 
     const placeholderImage = screen.getByAltText(

@@ -64,31 +64,30 @@ npm run dev
 
 ```
 List-Of-Books/
-├── book-list/                    # Main application directory
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── BookCard/
-│   │   │   │   ├── BookCard.jsx      # Individual book card component
-│   │   │   │   └── styles.css        # BookCard-specific styles
-│   │   │   ├── BookList/
-│   │   │   │   ├── BookList.jsx      # Book list container component
-│   │   │   │   └── styles.css        # BookList-specific styles
-│   │   │   └── __tests__/
-│   │   │       ├── BookCard.test.jsx # BookCard component tests
-│   │   │       └── BookList.test.jsx # BookList component tests
-│   │   ├── mock/
-│   │   │   └── books.js              # Mock book data for development
-│   │   ├── App.jsx                   # Main application component
-│   │   ├── App.css                   # Global application styles
-│   │   ├── index.css                 # Root styles and CSS variables
-│   │   ├── main.jsx                  # Application entry point
-│   │   └── testSetup.js              # Vitest test configuration
-│   ├── public/                       # Static assets
-│   ├── index.html                    # HTML template
-│   ├── vite.config.js               # Vite build configuration
-│   ├── eslint.config.js             # ESLint code quality rules
-│   └── package.json                 # Project dependencies and scripts
-└── README.md                         # Project documentation
+├── src/
+│   ├── components/
+│   │   ├── BookCard/
+│   │   │   ├── BookCard.jsx      # Individual book card component
+│   │   │   └── styles.css        # BookCard-specific styles
+│   │   ├── BookList/
+│   │   │   ├── BookList.jsx      # Book list container component
+│   │   │   └── styles.css        # BookList-specific styles
+│   │   └── __tests__/
+│   │       ├── BookCard.test.jsx # BookCard component tests
+│   │       └── BookList.test.jsx # BookList component tests
+│   ├── mock/
+│   │   └── books.js              # Mock book data for development
+│   ├── App.jsx                   # Main application component
+│   ├── App.css                   # Global application styles
+│   ├── index.css                 # Root styles and CSS variables
+│   ├── main.jsx                  # Application entry point
+│   └── testSetup.js              # Vitest test configuration
+├── public/                       # Static assets
+├── index.html                    # HTML template
+├── vite.config.js               # Vite build configuration
+├── eslint.config.js             # ESLint code quality rules
+├── package.json                 # Project dependencies and scripts
+└── README.md                     # Project documentation
 ```
 
 ````
