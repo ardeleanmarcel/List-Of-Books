@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BookCard } from "../BookCard/BookCard.jsx";
 import "./styles.css";
 
@@ -8,6 +8,7 @@ export function BookList({ initialBooks }) {
   const handleAddBook = () => {
     const nextId =
       books.length > 0 ? Math.max(...books.map((b) => b.id)) + 1 : 1;
+    // Create a new book with a unique ID (in case of deletions - even it's not implemented yet)
 
     const newBook = {
       id: nextId,

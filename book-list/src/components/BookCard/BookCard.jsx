@@ -20,10 +20,18 @@ export function BookCard({ title, description, imageUrl }) {
     .replace(/\s+/g, "-")
     .toLowerCase()}`;
 
+  const shouldShowPlaceholder = !imageUrl || hasImageError;
+
   return (
     <article className="book-card">
       <div className="book-card-media">
-        {imageUrl && !hasImageError && (
+        {shouldShowPlaceholder ? (
+          <img
+            src={PLACEHOLDER_IMAGE}
+            alt="Placeholder cover: no image available"
+            className="book-card-image book-card-image--placeholder"
+          />
+        ) : (
           <img
             src={imageUrl}
             alt={`Cover of the book "${title}"`}
@@ -31,24 +39,12 @@ export function BookCard({ title, description, imageUrl }) {
             onError={onImageError}
           />
         )}
-        {!imageUrl && !hasImageError && (
-          <img
-            src={PLACEHOLDER_IMAGE}
-            alt="Placeholder cover: no image available"
-            className="book-card-image book-card-image--placeholder"
-          />
-        )}
-        {hasImageError && (
-          <p className="book-card-image-error" role="status">
-            Image failed to load.
-          </p>
-        )}
       </div>
 
       <div className="book-card-content">
         <h3 className="book-card-title">{title}</h3>
 
-        {description && (
+        {description ? (
           <>
             <button
               type="button"
@@ -66,9 +62,7 @@ export function BookCard({ title, description, imageUrl }) {
               </p>
             )}
           </>
-        )}
-
-        {!description && (
+        ) : (
           <p className="book-card-description--missing" role="note">
             No description provided for this book.
           </p>

@@ -11,8 +11,7 @@ function App() {
           A React application that displays a list of books using a reusable
           component. It includes features like toggling descriptions, handling
           missing/broken images, adding new books dynamically, and accessibility
-          support. The app uses mock data and is structured for clean,
-          maintainable code with unit tests included.
+          support. The app uses mock data and has unit tests included.
         </p>
       </header>
 
